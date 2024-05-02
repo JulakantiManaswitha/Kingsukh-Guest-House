@@ -1,5 +1,5 @@
 ## Deployment
 
-The application is deployed. Click the link below to access it:
+The application is deployed on netlify. Click the link below to access it:
 
 https://kingsukhguesthouse.netlify.app/
