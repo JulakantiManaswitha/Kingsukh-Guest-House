@@ -1,0 +1,554 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="icon" href="images/guesthouse logo.jpg" type="image/x-icon">
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Remix -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+        <!-- Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <title>Kingsukh Guest House</title>
+        <link href="/dist/output.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="fixed top-0 left-0 w-full z-50 bg-primaryColor dark:bg-darkColor">
+            <nav class="container relative h-14 flex justify-between items-center">
+                <div>
+                    <a href="#logo" class="text-2xl uppercase text-secondaryColor font-oswald whitespace-nowrap tracking-tight font-medium"><span class="text-whiteColor">Kingsukh</span> Guest House</a>
+                </div>
+                <div class="hidden absolute top-0 left-0 w-full py-14 bg-primaryColor dark:bg-darkColor border-b border-secondaryColor md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto"
+                id="navList">
+                    <ul class=" flex flex-col text-center gap-5 md:flex-row md:ml-2 md:gap-3 lg:gap-5">
+                        <li>
+                            <a href="#home" class="navLink text-secondaryColor hover:text-secondaryColor ease-in duration-150">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="navLink hover:text-secondaryColor ease-in duration-150">About</a>
+                        </li>
+                        <li>
+                            <a href="#rooms" class="navLink hover:text-secondaryColor ease-in duration-150">Rooms</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="navLink hover:text-secondaryColor ease-in duration-150">Services</a>
+                        </li>
+                        <li>
+                            <a href="#gallery" class="navLink hover:text-secondaryColor ease-in duration-150">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#reviews" class="navLink hover:text-secondaryColor ease-in duration-150">Reviews</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="navLink hover:text-secondaryColor ease-in duration-150">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="absolute top-[0.8rem] right-4 text-2xl cursor-pointer md:hidden" id="menuCloseIcon">
+                        <i class="ri-close-line text-2xl cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center gap-4">
+                    <i class="ri-moon-line cursor-pointer text-2xl ml-4" id="themeToggle"></i>
+                    <a href="https://api.whatsapp.com/send?phone=9007062180" target="_blank"><button class="btn">BOOK NOW</button></a>
+                    <div id="hamburger" class="md:hidden">
+                        <i class="ri-menu-3-line cursor-pointer text-2xl"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="relative">
+                <div class="w-80 h-80 bg-blobColor dark:bg-darkColor absolute top-20 -left-5 -z-10 blur-3xl opacity-40 overflow-hidden rounded-full"></div>
+
+                <div class="w-80 h-80 bg-whiteColor dark:bg-darkColor absolute -bottom-12 right-0 -z-10 blur-3xl opacity-40 overflow-hidden rounded-full"></div>
+
+                <div class="container mt-10">
+                    <div class="flex flex-col items-center z-20 md:flex-row">
+                        <div class="home__content text-center mb-10 md:text-left md:w-1/2 md:pr-10">
+                            <h1 class="title">Step into a world of opulence and <span class="text-orangeColor"> let our guest house be your home away from home.</span></h1>
+                            <p class="leading-relaxed mb-10">Kingsukh Guest House offers a serene escape nestled in the heart of Barhanti. With a legacy of hospitality spanning decades, our guest house promises a warm welcome and a comfortable stay for travelers seeking a tranquil retreat.</p>
+                            <a href="https://api.whatsapp.com/send?phone=9007062180" target="_blank"><button class="btn">BOOK NOW</button></a>
+                            <a href="#" class="text-whiteColor hover:text-secondaryColor inline-flex items-center ml-4 cursor-pointer">Learn More
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="images/header.jpg" alt="homeImg" class="home__image rounded-3xl">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="bookingSection">
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <h1 class="heading title text-secondaryColor text-center">Booking Preferences</h2>
+                    <form class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6">
+                        <div class="booking__card formItems flex flex-col justify-center">
+                            <label for="checkin-date" class="w-full text-lg tracking-normal">Check In Date: </label>
+                            <input type="date" id="checkin-date" class="text-blackColor w-full p-2 rounded-lg cursor-pointer" required>
+                        </div>
+                        <div class="booking__card formItems flex flex-col justify-center">
+                            <label for="checkout-date" class="w-full text-lg tracking-normal">Check Out Date: </label>
+                            <input type="date" id="checkout-date" class="text-blackColor w-full p-2 rounded-lg cursor-pointer" required>
+                        </div>
+                        <div class="booking__card formItems flex flex-col justify-center">
+                            <label for="adult" class="w-full text-lg tracking-normal">Adults: </label>
+                            <input type="number" min="1" value="1" id="adult" class="text-blackColor w-full p-2 rounded-lg" required>
+                        </div>
+                        <div class="booking__card formItems flex flex-col justify-center">
+                            <label for="children" class="w-full text-lg tracking-normal">Children: </label>
+                            <input type="number" min="1" value="1" id="children" class="text-blackColor w-full p-2 rounded-lg" required>
+                        </div>
+                        <div class="booking__card formItems flex flex-col justify-center">
+                            <label for="checkinrooms" class="w-full text-lg tracking-normal">Rooms: </label>
+                            <input type="number" min="1" max="5" value="1" id="checkinrooms" class="text-blackColor w-full p-2 rounded-lg" required>
+                        </div>
+                        <div class="booking__card formItems">
+                            <label for=""></label>
+                            <a href="mailto:kkghosh0099@gmail.com"><input type="submit" class="btn w-full cursor-pointer mt-6" value="SUBMIT" /></a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section id="about" class="relative">
+                <div class="w-80 h-80 bg-amber-300 dark:bg-darkColor absolute top-40 -left-8 -z-10 blur-3xl opacity-40 overflow-hidden rounded-full"></div>
+
+                <div class="w-80 h-80 bg-pink-300 dark:bg-darkColor absolute -bottom-12 right-0 -z-10 blur-3xl opacity-40 overflow-hidden rounded-full"></div>
+
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <div class="flex flex-col items-center z-20 md:flex-row">
+                        <div class="about__content text-center mb-10 md:text-left md:w-1/2 md:pr-10">
+                            <h4 class="text-secondaryColor text-xl mb-4">About Us</h4>
+                            <h1 class="title">Unwind and Relax at <span class="text-blobColor">Kingsukh Guest House</span>.</h1>
+                            <p class="leading-relaxed mb-10">At Kingsukh Guest House, we believe in creating memorable experiences for our guests. From the moment you step through our doors, our dedicated team is committed to ensuring your comfort and satisfaction. Our attentive staff is always on hand to assist you with any request, ensuring that your stay with us is nothing short of exceptional.</p>
+                            <a href="https://api.whatsapp.com/send?phone=9007062180" target="_blank"><button class="btn">BOOK NOW</button></a>
+                            <a href="#" class="text-whiteColor hover:text-secondaryColor inline-flex items-center ml-4 cursor-pointer">Learn More
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="about__image md:w-1/2">
+                            <img src="images/service.jpg" alt="homeImg" class="rounded-3xl">
+                            <p class="text-lg mt-4 text-center text-paragraphColor">Address: Beside Barshal Water Tank, Manpur, Barhanti, West Bengal 723156</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rooms">
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <div class="flex flex-col text-center md:text-left w-full md:flex-row">
+                        <h1 class="heading title text-secondaryColor md:w-2/5">Discover Our Homely Rooms</h1>
+                        <p class="rsg__content text-lg md:w-3/5">Immerse yourself in a stay that promises to be unforgettable at Kingsukh Guest House, where every room is designed to create cherished memories. Step into a world of comfort and elegance as you enter our meticulously crafted accommodations, each exuding its own unique charm and character.</p>
+                    </div>
+                    <div class="flex flex-col py-10 gap-8 md:flex-row">
+                        <div class="rr__cards flex flex-col gap-2 rounded-3xl p-3 hover:bg-primaryColorLight dark:hover:bg-darkColorLight">
+                            <div class="relative">
+                                <img src="images/small.jpg" alt="room1" class="rounded-2xl">
+                                <i class="ri-shield-star-fill absolute right-4 bottom-2 inline-flex justify-center items-center text-2xl rounded-full bg-blue-200 text-center text-blue-400 w-10 h-10"></i>
+                                <i class="ri-paint-fill absolute right-16 bottom-2 inline-flex justify-center items-center text-2xl rounded-full bg-purple-200 text-purple-500 w-10 h-10"></i>
+                                <i class="ri-heart-fill absolute right-28 bottom-2 inline-flex justify-center items-center text-2xl rounded-full w-10 h-10 bg-pink-200 text-pink-500"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-fuchsia-400">Cozy Haven Room</h2>
+                            <p class="text-paragraphColor">Escape to comfort in our Cozy Haven Room, a snug retreat designed for intimate relaxation and peace.</p>
+                            <p class="text-whiteColor">Starting from <span class="text-secondaryColor">Rs. 1000/night</span></p>
+                            <div>
+                                <a href="https://api.whatsapp.com/send?phone=9007062180" target="_blank"><button class="btn">BOOK NOW</button></a>
+                                <a href="#" class="text-whiteColor hover:text-secondaryColor inline-flex items-center ml-4 cursor-pointer">Learn More
+                                    <i class="ri-arrow-right-line ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rr__cards flex flex-col gap-2 rounded-3xl p-3 hover:bg-primaryColorLight dark:hover:bg-darkColorLight">
+                            <div class="relative">
+                                <img src="images/large.jpg" alt="room1" class="rounded-2xl">
+                                <i class="ri-shield-star-fill absolute right-4 bottom-2 inline-flex justify-center items-center text-2xl rounded-full bg-blue-200 text-center text-blue-400 w-10 h-10"></i>
+                                <i class="ri-paint-fill absolute right-16 bottom-2 inline-flex justify-center items-center text-2xl rounded-full bg-purple-200 text-purple-500 w-10 h-10"></i>
+                                <i class="ri-heart-fill absolute right-28 bottom-2 inline-flex justify-center items-center text-2xl rounded-full w-10 h-10 bg-pink-200 text-pink-500"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-fuchsia-400">Spacious Serenity Suite</h2>
+                            <p class="text-paragraphColor">Indulge in luxury and ample space in our Spacious Serenity Suite, where tranquility meets roomy elegance.</p>
+                            <p class="text-whiteColor">Starting from <span class="text-secondaryColor">Rs. 1500/night</span></p>
+                            <div>
+                                <a href="https://api.whatsapp.com/send?phone=9007062180" target="_blank"><button class="btn">BOOK NOW</button></a>
+                                <a href="#" class="text-whiteColor hover:text-secondaryColor inline-flex items-center ml-4 cursor-pointer">Learn More
+                                    <i class="ri-arrow-right-line ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rr__cards flex flex-col gap-2 rounded-3xl p-3 hover:bg-primaryColorLight dark:hover:bg-darkColorLight">
+                            <div class="relative">
+                                <img src="images/room1.jpg" alt="room1" class="rounded-2xl">
+                                <i class="ri-shield-star-fill absolute right-4 bottom-2 inline-flex justify-center items-center text-2xl rounded-full bg-blue-200 text-center text-blue-400 w-10 h-10"></i>
+                                <i class="ri-paint-fill absolute right-16 bottom-2 inline-flex justify-center items-center text-2xl rounded-full bg-purple-200 text-purple-500 w-10 h-10"></i>
+                                <i class="ri-heart-fill absolute right-28 bottom-2 inline-flex justify-center items-center text-2xl rounded-full w-10 h-10 bg-pink-200 text-pink-500"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-fuchsia-400">Presidential Suite Room</h2>
+                            <p class="text-paragraphColor">Experience the pinnacle of luxury in our presidential suite, where opulence meets unparalleled service.</p>
+                            <p class="text-whiteColor">Starting from <span class="text-secondaryColor">Rs. 1600/night</span></p>
+                            <div>
+                                <a href="https://api.whatsapp.com/send?phone=9007062180" target="_blank"><button class="btn">BOOK NOW</button></a>
+                                <a href="#" class="text-whiteColor hover:text-secondaryColor inline-flex items-center ml-4 cursor-pointer">Learn More
+                                    <i class="ri-arrow-right-line ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="relative">
+                
+                <div class="w-80 h-80 bg-amber-300 dark:bg-darkColor absolute top-40 -left-8 -z-10 blur-3xl opacity-40 overflow-hidden rounded-full"></div>
+
+                <div class="w-80 h-80 bg-blobColor dark:bg-darkColor absolute bottom-8 right-8 -z-10 blur-3xl opacity-40 overflow-hidden rounded-full"></div>
+
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <div class="flex flex-col text-center md:text-left w-full md:flex-row">
+                        <h1 class="heading title text-secondaryColor md:w-2/5">Our Services</h1>
+                        <p class="rsg__content text-lg md:w-3/5">Discover the epitome of luxury and convenience at our hotel and indulge in a truly unforgettable experience.</p>
+                    </div>
+                    <div class="flex flex-col my-10 gap-10 md:flex-row py-10">
+                        <div class="md:w-1/2">
+                            <img src="images/recep.jpg" alt="recep" class="services__image w-full rounded-3xl" style="height: 600px;">
+                        </div>
+                        <div class="flex flex-col gap-4 md:items-start items-center justify-center md:w-1/2 md:gap-8">
+                            <div class="services__cards w-full flex items-center justify-start border border-transparent hover:border-paragraphColor rounded-xl px-1 py-3 md:flex-col md:items-start md:px-4 md:py-2 md:gap-1 hover:shadow-2xl hover:shadow-primaryColorLight dark:hover:shadow-darkColorLight">
+                                <div class="inline-flex justify-center items-center w-12 h-12 rounded-full bg-blue-200 text-blue-500 md:ml-4">
+                                    <i class="ri-shield-star-fill text-2xl "></i>
+                                </div>
+                                <div>
+                                    <p class="ml-4 text-lg font-semibold text-blue-400">High Class Security</p>
+                                </div>
+                            </div>
+                            <div class="services__cards w-full flex items-center justify-start border border-transparent hover:border-paragraphColor rounded-xl px-1 py-3 md:flex-col md:items-start md:px-4 md:py-2 md:gap-1 hover:shadow-2xl hover:shadow-primaryColorLight dark:hover:shadow-darkColorLight">
+                                <div class="inline-flex justify-center items-center w-12 h-12 rounded-full bg-pink-200 text-pink-500 md:ml-4">
+                                    <i class="ri-24-hours-line text-2xl "></i>
+                                </div>
+                                <div>
+                                    <p class="ml-4 text-lg font-semibold text-pink-400">24 Hours Room Service</p>
+                                </div>
+                            </div>
+                            <div class="services__cards w-full flex items-center justify-start border border-transparent hover:border-paragraphColor rounded-xl px-1 py-3 md:flex-col md:items-start md:px-4 md:py-2 md:gap-1 hover:shadow-2xl hover:shadow-primaryColorLight dark:hover:shadow-darkColorLight">
+                                <div class="inline-flex justify-center items-center w-12 h-12 rounded-full bg-orange-200 text-orange-500 md:ml-4">
+                                    <i class="ri-restaurant-fill text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="ml-4 text-lg font-semibold text-orange-400">Restaurant</p>
+                                </div>
+                            </div>
+                            <div class="services__cards w-full flex items-center justify-start border border-transparent hover:border-paragraphColor rounded-xl px-1 py-3 md:flex-col md:items-start md:px-4 md:py-2 md:gap-1 hover:shadow-2xl hover:shadow-primaryColorLight dark:hover:shadow-darkColorLight">
+                                <div class="inline-flex justify-center items-center w-12 h-12 rounded-full bg-green-200 text-greenColor md:ml-4">
+                                    <i class="ri-map-2-line text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="ml-4 text-lg font-semibold text-green-400">Tourist Guide Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="statastics">
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <h1 class="heading title text-center text-secondaryColor">Our Statastics</h1>
+                    <div class="flex flex-col items-center justify-center text-center gap-5 my-6 md:flex-row">
+                        <div class="stats__card1 w-1/2 rounded-xl p-3 border-2 border-blobColor cursor-pointer dark:border-whiteColor">
+                            <h3 class="text-3xl md:4xl font-bold text-redColor mb-0">100+</h3>
+                            <p class="text-whiteColor font-medium">Bookings Completed</p>
+                        </div>
+                        <div class="stats__card2 w-1/2 rounded-xl p-3 border-2 border-blobColor cursor-pointer dark:border-whiteColor">
+                            <h3 class="text-3xl md:text-4xl font-bold text-redColor mb-0">150+</h3>
+                            <p class="text-whiteColor font-medium">Happy Customers</p>
+                        </div>
+                        <div class="stats__card3 w-1/2 rounded-xl p-3 border-2 border-blobColor cursor-pointer dark:border-whiteColor">
+                            <h3 class="text-3xl md:text-4xl font-bold text-redColor mb-0">4.8 <span class="text-secondaryColor">&#9733;</span></h3>
+                            <p class="text-whiteColor font-medium">Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gallery">
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <div class="flex flex-col text-center md:text-left w-full md:flex-row">
+                        <h1 class="heading title text-secondaryColor md:w-2/5">Gallery</h1>
+                        <p class="rsg__content text-lg md:w-3/5">Capturing the essence of elegance and comfort, our Guest House's photo gallery offers a visual journey through the allure of our accommodations and amenities.</p>
+                    </div>
+                    <div class="flex flex-wrap my-16">
+                        <div class="flex flex-wrap w-1/2">
+                            <div class="gallery__cardL w-1/2 p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/service.jpg" alt="ayodhya" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                            <div class="gallery__cardR w-1/2 p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/small.jpg" alt="large" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                            <div class="gallery__cardL w-full p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/1.jpg" alt="1" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                            <div class="gallery__cardL w-full p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/large.jpg" alt="large" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                            <div class="gallery__cardB w-full p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/mithonDam.webp" alt="mithonDam" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap w-1/2">
+                            <div class="gallery__cardT w-full p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/ayodhya.webp" alt="outImg" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                            <div class="gallery__cardR w-full p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/palash.webp" alt="palash" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                            <div class="gallery__cardR w-full p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/out.jpg" alt="recep" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                            <div class="gallery__cardL w-1/2 p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/flower.jpg" alt="ayodhya" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                            <div class="gallery__cardR w-1/2 p-1 rounded-lg border border-transparent hover:border-secondaryColor">
+                                <img src="images/room1.jpg" alt="room1" class="w-full h-full block object-cover object-center rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="reviews" class="bg-primaryColorLight dark:bg-darkColorLight">
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <h1 class="heading title text-secondaryColor text-center"> Customer Reviews</h1>
+                    <div class="swiper py-10">
+                        <ul class="swiper-wrapper">
+                            <li class="rr__cards swiper-slide">
+                                <div class="flex flex-col gap-5 rounded-lg p-6 bg-primaryColor dark:bg-darkColor">
+                                    <p>Very good service with clean room also staff are very friendly,tasty food.Large room with lot of space.Perfect for a budget short trip gateway.</p>
+                                    <i class="fa-solid fa-quote-right text-2xl text-secondaryColor text-center"></i>
+                                </div>
+                            </li>
+                            <li class="rr__cards swiper-slide">
+                                <div class="flex flex-col gap-5 rounded-lg p-6 bg-primaryColor dark:bg-darkColor">
+                                    <p class="paragraph">Nice view.Good location.Good food.Nice atmosphere of hotel.Good behaviour of owner and hotel staff.it's also a budget friendly hotel.</p>
+                                    <i class="fa-solid fa-quote-right text-2xl text-secondaryColor text-center"></i>
+                                </div>
+                            </li>
+                            <li class="rr__cards swiper-slide">
+                                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                                    <p class="paragraph">Good experience.Homely food and great view points.Nice place for vacation.Affordable prices.Rooms are in good condition....</p>
+                                    <i class="fa-solid fa-quote-right text-2xl text-secondaryColor text-center"></i>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                                    <p class="paragraph">Comfortable rooms and good room service as well.High security 24 hours.Tasty, hygenic food and snacks. Friendly Behaviour of staff.. </p>
+                                    <i class="fa-solid fa-quote-right text-2xl text-secondaryColor text-center"></i>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <h1 class="heading title text-secondaryColor text-center">Contact Us</h1>
+                    <div class="flex flex-col gap-10 md:flex-row">
+                        <div
+                          class="contact__iframe lg:w-2/3 md:w-1/2 rounded-lg px-10 py-16 flex justify-center items-center overflow-hidden relative border-2 border-greenColor md:items-end">
+                          <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0"
+                            marginwidth="0" scrolling="no"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5017351225647!2d86.85721547510981!3d23.586332378782714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6e3fdd3ff9ebb%3A0x517a57e3f93c1807!2sKingsukh%20Guest%20House!5e0!3m2!1sen!2sin!4v1705088034844!5m2!1sen!2sin"
+                            style="filter: opacity(0.8);">
+                          </iframe>
+                          <div class="bg-primaryColorLight dark:bg-darkColorLight relative flex flex-wrap py-4 rounded-lg shadow-md w-[90%] border-2 border-transparent hover:border-orangeColor">
+                            <div class="lg:w-1/2 px-5 mt-2">
+                              <div class="flex justify-start items-center gap-2 p-1 mt-2">
+                                <span><i class="fa-solid fa-map-location-dot text-2xl text-secondaryColor mr-2"></i></span>
+                                <a href="https://maps.app.goo.gl/7wYUEB4tvR7NMHbcA" class="hover:underline">Beside Barshal Water Tank, Manpur, Barhanti, West Bengal 723156</a>
+                              </div>
+                            </div>
+                            <div class="lg:w-1/2 px-5">
+                              <div class="flex justify-start items-center gap-2 mt-2 p-1">
+                                <span><i class="fa-solid fa-envelope-open-text text-2xl text-secondaryColor mr-2"></i></span>
+                                <a href="mailto:kkghosh0099@gmail.com"   class="hover:underline">kkghosh0099@gmail.com</a>
+                              </div>
+                              <div class="flex justify-start items-center gap-2 mt-2 p-1">
+                                <span><i class="fa-solid fa-phone-volume text-2xl text-secondaryColor mr-2"></i></span>
+                                <a href="tel:+919007062180" class="hover:underline">+91 9007062180 </a>
+                              </div>
+                              <div class="flex justify-between items-center mt-3">
+                                <a href="https://www.facebook.com">
+                                  <img src="images/facebook.png" alt="facebook" class="w-8 h-8 hover:opacity-80 ease-in duration-150">
+                                </a>
+                                <a href="https://www.instagram.com">
+                                  <img src="images/instagram.png" alt="facebook" class="w-8 h-8 hover:opacity-80 ease-in duration-150">
+                                </a>
+                                <a href="https://www.youtube.com">
+                                  <img src="images/youtube.png" alt="facebook" class="w-8 h-8 hover:opacity-80 ease-in duration-150">
+                                </a>
+                                <a href="https://www.twitter.com">
+                                  <img src="images/twitter.png" alt="facebook" class="w-8 h-8 hover:opacity-80 ease-in duration-150">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="contact__form lg:w-1/3 md:w-1/2 md:ml-auto border-2 border-secondaryColor bg-primaryColorLight dark:bg-darkColorLight rounded-xl w-[90%] self-center p-4">
+                          <h2 class="text-xl font-medium mb-4">Send a Message</h2>
+                            <form>
+                                <label for="firstname" class=" text-md">First Name</label> <br>
+                                <input type="text" name="firstname" id="firstname" class="my-2 w-full rounded p-2 text-darkColor" placeholder="First Name" required>
+                                <label for="lastname" class="text-md">Last Name</label> <br>
+                                <input type="text" name="lastname" id="lastname" class="my-2 w-full rounded p-2 text-darkColor" placeholder="Last Name" required>
+                                <label for="email" class="text-md">Email</label> <br>
+                                <input type="email" name="email" id="email" class="my-2 w-full rounded p-2 text-darkColor" placeholder="Email Address" required>
+                                <label for="number" class="text-md">Mobile Number</label> <br>
+                                <input type="text" name="number" id="number" class="my-2 w-full rounded p-2 text-darkColor" placeholder="Mobile Number" required>
+                                <label for="message" class="text-md">Message</label> <br>
+                                <textarea name="message" id="message" cols="30" rows="6" class="my-2 w-full rounded p-2 text-darkColor" placeholder="Write your message here..." required></textarea>
+                                <a href="mailto:kkghosh0099@gmail.com"><button class="btn text-lg font-semibold">Submit</button></a>
+                            </form>  
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section id="footer">
+                <div class="container">
+                    <div class="line seperator"></div>
+                    <div class="grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-4 p-4">
+                        <div class="footer__items flex flex-col gap-6 p-4 border-2 border-transparent rounded-xl hover:bg-primaryColorLight dark:hover:bg-darkColorLight">
+                            <a href="#"><h2 class="text-2xl text-secondaryColor font-oswald font-medium tracking-tight whitespace-nowrap uppercase">Kingsukh <span class="text-whiteColor"> Guest House</span></h2></a>
+                            <p>Discover a world of comfort, luxury, and adventure as you explore our curated selection of hotels.</p>
+                            <a href="https://api.whatsapp.com/send?phone=9007062180" target="_blank"><button class="btn">BOOK NOW</button></a>
+                        </div>
+                        <div class="footer__items flex flex-col gap-6 p-4 border-2 border-transparent rounded-xl hover:bg-primaryColorLight dark:hover:bg-darkColorLight">
+                            <h2 class="text-xl text-secondaryColor font-medium">Quick Links</h2>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Browse Destinations</a></li>
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Special Offers & Packages</a></li>
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Room Types & Amenities</a></li>
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Customer Reviews & Ratings</a></li>
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Travel Tips & Guides</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__items flex flex-col gap-6 p-4 border-2 border-transparent rounded-xl hover:bg-primaryColorLight dark:hover:bg-darkColorLight">
+                            <h2 class="text-xl text-secondaryColor font-medium">Our Services</h2>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Concierge Assistance</a></li>
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Flexible Booking Options</a></li>
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Airport Transfers</a></li>
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Wellness & Recreation</a></li>
+                                <li><a href="#" class="hover:text-secondaryColor ease-in duration-150">Tourist Guides</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__items flex flex-col gap-6 p-4 border-2 border-transparent rounded-xl hover:bg-primaryColorLight dark:hover:bg-darkColorLight">
+                            <h2 class="text-xl text-secondaryColor font-medium">Contact Us</h2>
+                            <ul class="space-y-3">
+                                <li><a href="https://maps.app.goo.gl/7wYUEB4tvR7NMHbcA" class="hover:text-secondaryColor ease-in duration-150">Beside Barshal Water Tank, Manpur, Barhanti, West Bengal 723156</a></li>
+                                <li><a href="mailto:kkghosh0099@gmail.com" class="hover:text-secondaryColor ease-in duration-150">kkghosh0099@gmail.com</a></li>
+                                <li><a href="tel:+919007062180" class="hover:text-secondaryColor ease-in duration-150">+91 9007062180</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__items border-t-2 border-secondaryColor dark:border-darkColorLight my-8 py-10 flex flex-col md:flex-row md:justify-between">
+                        <div class="p-5">
+                            <label for="email" class="text-md">Stay Up To Date</label> <br>
+                            <input type="email" name="email" id="email" class="my-2 rounded px-3 py-2 text-darkColor w-72" placeholder="Email"> <br>
+                            <a href="mailto:kkghosh0099@gmail.com"><button class="px-3 py-2 bg-blobColor dark:bg-violetColor rounded-lg text-lg font-medium hover:opacity-80 w-36">Submit</button></a>
+                        </div>
+                        <div class="flex justify-start items-center p-5 gap-6">
+                            <a href="https://www.facebook.com">
+                              <img src="images/facebook.png" alt="facebook" class="w-8 h-8 hover:opacity-80 ease-in duration-150">
+                            </a>
+                            <a href="https://www.instagram.com">
+                              <img src="images/instagram.png" alt="instagram" class="w-8 h-8 hover:opacity-80 ease-in duration-150">
+                            </a>
+                            <a href="https://www.youtube.com">
+                              <img src="images/youtube.png" alt="youtube" class="w-8 h-8 hover:opacity-80 ease-in duration-150">
+                            </a>
+                            <a href="https://twitter.com">
+                              <img src="images/twitter.png" alt="twitter" class="w-8 h-8 hover:opacity-80 ease-in duration-150">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__items flex flex-col mb-8 p-2 items-center md:flex-row md:justify-between md:items-center gap-4 border border-transparent border-t-primaryColorLight dark:border-t-darkColorLight md:p-4">
+                        <p class="whitespace-nowrap">Copyright © 2024 Kingsukh Guest House.All rights reserved.</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="hover:text-secondaryColor ease-in duration-200">Terms of Service</a>
+                            <a href="#" class="hover:text-secondaryColor ease-in duration-200">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        
+
+
+        <!-- Scroll Up -->
+        <a href="#" class="fixed right-4 -bottom-1/2 bg-secondaryColor shadow-lg inline-block px-4 py-2 rounded-full text-lg text-blackColor z-50 hover:-translate-y-1 ease-in duration-150" id="scroll-up">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+
+
+        <!-- Swiper Js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction:false
+            },
+            // If need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable:true,
+            },
+            grabCursor:true,
+            breakpoints: {
+                // when window width is >= 480px
+                480: {
+                slidesPerView: 1,
+                },
+                // when window width is >= 960px
+                960: {
+                slidesPerView: 2,
+                },
+                // when window width is >= 1200px
+                1200: {
+                slidesPerView: 3,
+                }
+            },
+            });
+        </script>
+
+        <!-- Scroll Reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- Main.js -->
+        <script src="main.js"></script>
+    </body>
+</html>
